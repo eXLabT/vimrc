@@ -10,24 +10,24 @@ let path='~/vimfiles/bundle'
 call vundle#rc(path)
 
 " let Vundle manage Vundle, required
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " The following are examples of different formats supported.
-" Keep bundle commands between here and filetype plugin indent on.
+" Keep Plugin commands between here and filetype plugin indent on.
 " scripts on Github repos
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-rails.git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-rails.git'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Bundle 'rstacruz/sparkup',{'rtp': 'vim/'}
+Plugin 'rstacruz/sparkup',{'rtp': 'vim/'}
 " scripts from http://vim-scripts.org/vim/scripts.html
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
 " scripts not on GitHub
-Bundle 'git://git.wincent.com/command-t.git'
+Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine(i.e when working on your own plugin)
-Bundle 'file:///home/gmarik/path/to/plugin'
+Plugin 'file:///home/gmarik/path/to/plugin'
 " ...
 
 filetype plugin indent on " required
@@ -35,13 +35,13 @@ filetype plugin indent on " required
 "filetype plugin on
 "
 " Brief help
-" :BundleList		- list configured bundles
-" :BundleInstall(!)	- install (update) bundles
-" :BundleSearch(!) foo	- search (or refresh cache first) for foo
-" :BundleClean(!)	- confirm (or auto-approve) removal of unused bundles
+" :PluginList		- list configured Plugins
+" :PluginInstall(!)	- install (update) Plugins
+" :PluginSearch(!) foo	- search (or refresh cache first) for foo
+" :PluginClean(!)	- confirm (or auto-approve) removal of unused Plugins
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle commands are not allowed.
+" NOTE: comments after Plugin commands are not allowed.
 " Put your stuff after this line
 
 """"""""""""""""""""
