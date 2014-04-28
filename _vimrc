@@ -15,19 +15,20 @@ Plugin 'gmarik/vundle'
 " The following are examples of different formats supported.
 " Keep Plugin commands between here and filetype plugin indent on.
 " scripts on Github repos
-Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'tpope/vim-rails.git'
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'Lokaltog/vim-easymotion'
+"Plugin 'tpope/vim-rails.git'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup',{'rtp': 'vim/'}
+"Plugin 'rstacruz/sparkup',{'rtp': 'vim/'}
 " scripts from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
-Plugin 'FuzzyFinder'
+"Plugin 'L9'
+"Plugin 'FuzzyFinder'
+Plugin 'taglist.vim'
 " scripts not on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
+"Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine(i.e when working on your own plugin)
-Plugin 'file:///home/gmarik/path/to/plugin'
+" Plugin 'file:///home/gmarik/path/to/plugin'
 " ...
 
 filetype plugin indent on " required
@@ -57,3 +58,4 @@ filetype plugin indent on " required
 :syntax on "synatx highlighting
 :filetype on
 :au BufNewFile,BufRead *.vcc set filetype=cpp
+:set tags=tags;
