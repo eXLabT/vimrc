@@ -114,3 +114,12 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0 | silent! pclose|endif
 :filetype on
 ":au BufNewFile,BufRead *.vcc set filetype=cpp
 :set tags=tags;
+""""""""""""""""""""""""""""""""""
+" Use cygwin shell
+" """"""""""""""""""""""""""""""""
+if has(win32)
+	set shell=d:/cygwin/bin/bash
+	set shellcmdflag=--login\ -c
+	set shellxquote=\"
+endif
+
