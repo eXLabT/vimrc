@@ -5,10 +5,14 @@ set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/vimfiles/bundle/vundle/
-let path='~/vimfiles/bundle'
-call vundle#rc(path)
-
+if has("win32")
+	set rtp+=~/vimfiles/bundle/vundle/
+	let path='~/vimfiles/bundle'
+	call vundle#rc(path)
+else
+	set rtp+=~/.vim/bundle/Vundle.vim
+	call vundle#begin()
+endif
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 
@@ -117,7 +121,7 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0 | silent! pclose|endif
 """"""""""""""""""""""""""""""""""
 " Use cygwin shell
 " """"""""""""""""""""""""""""""""
-if has(win32)
+if has("win32")
 	set shell=d:/cygwin/bin/bash
 	set shellcmdflag=--login\ -c
 	set shellxquote=\"
