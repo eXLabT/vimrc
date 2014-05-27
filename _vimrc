@@ -30,6 +30,8 @@ Plugin 'gmarik/vundle'
 "Plugin 'FuzzyFinder'
 Plugin 'taglist.vim'
 Plugin 'OmniCppComplete'
+Plugin 'lookupfile'
+Plugin 'genutils'
 " scripts not on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine(i.e when working on your own plugin)
@@ -55,7 +57,7 @@ filetype plugin indent on " required
 """"""""""""""""""""
 
 " """"""""""""""""""""""
-" OmniCppComplete Begin
+" OmniCppComplete Setting Begin
 " """"""""""""""""""""""
 " set Ctrl+j in insert mode, like VS.Net
 imap <C-j> <C-X><C-O>
@@ -103,7 +105,30 @@ let OmniCpp_SelectFirstItem = 0
 " automatically open and close the popup menu / preview window
 au CursorMovedI,InsertLeave * if pumvisible() == 0 | silent! pclose|endif
 " """"""""""""""""""""""
-" OmniCppComplete End
+" OmniCppComplete Setting End
+" """"""""""""""""""""""
+" """"""""""""""""""""""
+" lookupfile setting Begin
+" """"""""""""""""""""""
+:let g:LookupFile_TagExpr='"./filenametags"'
+nmap <unique> <silent> <A-S-O> <Plug>LookupFile
+" """"""""""""""""""""""
+" lookupfile setting End
+" """"""""""""""""""""""
+" """"""""""""""""""""""
+" taglist setting Begin
+" """"""""""""""""""""""
+" <A-m>: switch on/off TagList
+:nnoremap <silent> <A-m> :TlistToggle<CR>
+:let Tlist_Show_One_File = 1 " Display tags for only one file
+:let Tlist_Exit_OnlyWindow = 1 " if you are the last, kill yourself
+:let Tlist_Sort_Type = "order" " sort by order or name
+:let Tlist_Display_Prototype = 0 " do not show prototype and not tags in the taglist window
+:let Tlist_Close_On_Select = 1 " Close the taglist window when a file or tag is selected
+:let Tlist_GainFocus_On_ToggleOpen = 1 " Jump to taglist windown on Open
+:let Tlist_Show_Menu = 1
+" """"""""""""""""""""""
+" taglist setting End
 " """"""""""""""""""""""
 :set sw=4
 :set ts=4
@@ -116,14 +141,14 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0 | silent! pclose|endif
 :filetype indent on "autoindenting
 :syntax on "synatx highlighting
 :filetype on
-":au BufNewFile,BufRead *.vcc set filetype=cpp
+:au BufNewFile,BufRead *.vcc set filetype=cpp
 :set tags=tags;
 """"""""""""""""""""""""""""""""""
 " Use cygwin shell
 " """"""""""""""""""""""""""""""""
-if has("win32")
-	set shell=d:/cygwin/bin/bash
-	set shellcmdflag=--login\ -c
-	set shellxquote=\"
-endif
+"if has("win32")
+"	set shell=d:/cygwin/bin/bash
+"	set shellcmdflag=--login\ -c
+"	set shellxquote=\"
+"endif
 
