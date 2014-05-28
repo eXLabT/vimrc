@@ -126,7 +126,6 @@ nmap <unique> <silent> <A-S-O> <Plug>LookupFile
 :let Tlist_Display_Prototype = 0 " do not show prototype and not tags in the taglist window
 :let Tlist_Close_On_Select = 1 " Close the taglist window when a file or tag is selected
 :let Tlist_GainFocus_On_ToggleOpen = 1 " Jump to taglist windown on Open
-:let Tlist_Show_Menu = 1
 " """"""""""""""""""""""
 " taglist setting End
 " """"""""""""""""""""""
